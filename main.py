@@ -72,7 +72,7 @@ def machine(message, key, direction):
                 final_message += greek_combinations[new_index]
                 
 
-    print(final_message)
+    print(final_message+'\n')
 
 # Asking whether the user wants to Encrypt or Decrypt, Getting key and message.
 while True:
