@@ -31,14 +31,10 @@ def machine(message, key, direction):
                 key_character = key[previous_key_index : current_key_index]
                 current_key_index += 2
                 previous_key_index += 2
-                #print(key_character)
 
                 diff = greek_combinations.index(key_character)
-                #print(diff)
                 index = greek_combinations.index(message_character)
-                #print(index)
                 new_index = (index - diff) % len(greek_combinations)
-                #print(new_index)
                 final_message += alphabet[new_index]
             mc_key += 2
             mp_key += 2  
@@ -47,7 +43,7 @@ def machine(message, key, direction):
         # Encrypting
         for message_character in message.lower():
 
-            # Appending SPACE or Symbols *Note: they won't be Encrypted/Decrypted
+            # Appending SPACE or Symbols
             if not message_character.isalpha():
                 final_message += message_character*2
 
@@ -61,14 +57,10 @@ def machine(message, key, direction):
 
                 current_key_index += 2
                 previous_key_index += 2
-                #print(key_character)
 
                 diff = greek_combinations.index(key_character)
-                #print(diff)
                 index = alphabet.index(message_character)
-                #print(index)
                 new_index = (index + diff) % len(greek_combinations)
-                #print(new_index)
                 final_message += greek_combinations[new_index]
                 
 
