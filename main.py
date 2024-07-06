@@ -67,7 +67,7 @@ def machine(message, key, direction):
     print(final_message+'\n')
 
 # Asking whether the user wants to Encrypt or Decrypt, Getting key and message.
-while True
+while True:
     while True:
     
         direction = int(input("\nSelect ECRYPTION (1) / DECRYPTION (-1): "))
