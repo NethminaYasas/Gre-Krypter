@@ -67,34 +67,35 @@ def machine(message, key, direction):
     print(final_message+'\n')
 
 # Asking whether the user wants to Encrypt or Decrypt, Getting key and message.
-while True:
-
-    direction = int(input("\nSelect ECRYPTION (1) / DECRYPTION (-1): "))
-
-    if direction == 1 or direction == -1:
-        text = str(input("\nEnter the Message: "))
-        key = str(input("Enter Key (type '0' to generate a key): "))
-        temp = 0
-
-        # Generating a Key
-        if key == '0' :
-            key = str() 
-            
-            for i in range(20):
-                temp = random.randint(0,244)
-                key += greek_combinations[temp]
-            print(f'\nKey : {key}\n')
-            break
-        
-        # Confirming the custom-key
-        elif len(key)%2 == 0:
-            for i in key:
-                if i in greek_alphabet:
-                    temp += 1
-            if temp == len(key):
-                print("\n<-- key Confirmed -->\n")
-                break
+while True
+    while True:
     
-    print("\n**INVALID INPUT**")
-
-machine(text, key, direction)
+        direction = int(input("\nSelect ECRYPTION (1) / DECRYPTION (-1): "))
+    
+        if direction == 1 or direction == -1:
+            text = str(input("\nEnter the Message: "))
+            key = str(input("Enter Key (type '0' to generate a key): "))
+            temp = 0
+    
+            # Generating a Key
+            if key == '0' :
+                key = str() 
+                
+                for i in range(20):
+                    temp = random.randint(0,244)
+                    key += greek_combinations[temp]
+                print(f'\nKey : {key}\n')
+                break
+            
+            # Confirming the custom-key
+            elif len(key)%2 == 0:
+                for i in key:
+                    if i in greek_alphabet:
+                        temp += 1
+                if temp == len(key):
+                    print("\n<-- key Confirmed -->\n")
+                    break
+        
+        print("\n**INVALID INPUT**")
+    
+    machine(text, key, direction)
