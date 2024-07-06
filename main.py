@@ -94,7 +94,7 @@ while True:
             if temp == len(key):
                 print("\n<-- key Confirmed -->\n")
                 break
-      
-    print("\n**INVALID INPUT**")
+    else:
+        print("\n**INVALID INPUT**")
 
-machine(text, key, direction)
+    machine(text, key, direction)
