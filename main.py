@@ -64,7 +64,7 @@ def machine(message, key, direction):
                 final_message += greek_combinations[new_index]
                 
 
-    print(final_message+'\n')
+    return final_message+'\n'
 
 # Asking whether the user wants to Encrypt or Decrypt, Getting key and message.
 while True:
@@ -98,4 +98,4 @@ while True:
         
         print("\n**INVALID INPUT**")
     
-    machine(text, key, direction)
+    print(machine(text, key, direction))
